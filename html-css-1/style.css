@@ -183,6 +183,14 @@ footer {
 	.rectangle {
 		height: 150px;
 	}
+
+	footer {
+		height: 80px;
+	}
+
+	header {
+		height: 60px;
+	}
 }
 
 @media (max-width: 650px) {
@@ -195,10 +203,6 @@ footer {
 		width: 150px;
 	}
 
-	footer {
-		height: 50px;
-	}
-
 	.elephant-container {
 		flex-direction: column;
 	}
@@ -209,6 +213,10 @@ footer {
 	.elephant-div:first-child {
 		margin-bottom: 2rem;
 		width: 80%;
+	}
+
+	footer {
+		height: 50px;
 	}
 }
 
