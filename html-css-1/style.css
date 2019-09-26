@@ -32,14 +32,12 @@ ul {
 
 .container {
 	width: 65%;
-	margin: 3rem auto 0;
+	margin: 2rem auto 1rem;
 	display: flex;
 	align-items: center;
 	max-width: 960px;
-}
-
-.container:last-child {
-	margin-bottom: 3rem;
+	display: flex;
+	justify-content: space-between;
 }
 
 .blue {
@@ -117,13 +115,6 @@ main h1 {
 	padding: 8rem 0;
 }
 
-/*------------------------------------------ Orange Rectangle Section */
-
-.rectangle-container {
-	display: flex;
-	justify-content: space-between;
-}
-
 /*-------------------------------------------------- Elephant Section */
 
 .elephant-box {
@@ -139,6 +130,7 @@ main h1 {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	margin-bottom: 32px;
 }
 
 /*--------------------------------------------------------------- Footer */
@@ -153,7 +145,7 @@ footer {
 
 @media (max-width: 940px) {
 	.container {
-		width: 100%;
+		width: 90%;
 		padding: 0 0.5rem;
 	}
 
@@ -170,9 +162,9 @@ footer {
 	}
 }
 
-@media (max-width: 640px) {
+@media (max-width: 700px) {
 	.container {
-		width: 100%;
+		width: 80%;
 	}
 
 	main h1 {
@@ -184,11 +176,45 @@ footer {
 	}
 
 	.square {
-		height: 100px;
-		width: 100px;
+		height: 150px;
+		width: 150px;
 	}
 
 	.rectangle {
 		height: 150px;
+	}
+}
+
+@media (max-width: 650px) {
+	.container {
+		width: 90%;
+	}
+
+	.square {
+		height: 150px;
+		width: 150px;
+	}
+
+	footer {
+		height: 50px;
+	}
+
+	.elephant-container {
+		flex-direction: column;
+	}
+
+	.elephant-div {
+		width: 100%;
+	}
+	.elephant-div:first-child {
+		margin-bottom: 2rem;
+		width: 80%;
+	}
+}
+
+@media (max-width: 540px) {
+	.square {
+		height: 100px;
+		width: 100px;
 	}
 }
