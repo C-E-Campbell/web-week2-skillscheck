@@ -49,17 +49,21 @@ let superName = me.superHeroName;
 let homeTown = me.homeTown;
 //////////////////Step 4////////////////////
 //Create a function called 'setColor' that takes in one param called arr. Just to make sure that we only ever have three colors, use splice to trim the array to 3 colors.
-let setColor = arr => arr.splice(0, 3);
+let setColor = arr => {
+	arr = arr.splice(0, 3);
+	for (let i = 0; i < arr.length; i++) {
+		if (setColor[i] == "blue") {
+			setColor[i] = "#4d4dff";
+		}
+	}
+	background(arr[0], arr[1], arr[2]);
+	return arr;
+};
 
 // Next, create a for loop to loop over the array. If any of the colors you chose is 'blue', change it's value to '#4D4DFF' which is just a more appealing color of blue. Outside of the for loop but still inside of setColor, invoke the function called background which will take in three arguments. These arguments should be each item of your array. This is a function we created for you to set the background colors.
 
 // CODE HERE
-for (let i = 0; i < setColor.length; i++) {
-	if (setColor[i] == "blue") {
-		setColor[i] = "#4d4dff";
-	}
-	background(setColor[0], setColor[1], setColor[2]);
-}
+
 console.log(setColor[1]);
 //////////////////Step 5////////////////////
 //Create a function called 'setPowers' that takes in arr as a parameter.
@@ -83,5 +87,6 @@ let redactInfo = obj => {
 		console.log(key);
 		obj[key] = "redacted";
 	}
+	redacted();
 };
 // CODE HERE
